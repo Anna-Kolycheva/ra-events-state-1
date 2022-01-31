@@ -12,14 +12,14 @@
 
 @media (min-width: 610px) and (max-width: 1024px) {
    .projectlist {
-     width: 620px;
-     column-count: 2;
+      width: 620px;
+      column-count: 2;
    }
- }
- 
- @media (min-width: 1025px) {
+}
+
+@media (min-width: 1025px) {
    .projectlist {
-     width: 940px;
-     column-count: 3;
+      width: 940px;
+      column-count: 3;
    }
- }
+}

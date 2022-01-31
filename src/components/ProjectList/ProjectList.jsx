@@ -1,29 +1,34 @@
 import './ProjectList.css';
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { nanoid } from 'nanoid';
 
-function ProjectList(props) {
-   let projects = [];
-   if (props.selected !== 'All') {
-      projects = props.projects.filter(
-      (item) => item.category === props.selected
-      )     
+function ProjectList({ selected, projects }) {
+   let filtredProjects = [];
+
+   if (selected !== 'All') {
+      filtredProjects = projects.filter((item) => item.category === selected);
    } else {
-      projects = [...props.projects];
+      filtredProjects = [...projects];
    }
 
    return (
-      <div className='projectlist'>
-         {projects.map((item, index) =>
+      <div className="projectlist">
+         {filtredProjects.map((item) => (
             <img
-              className='projectlist-item'
-              src={item.img}
-              alt={item.category}
-              key={index}
+               className="projectlist-item"
+               src={item.img}
+               alt={item.category}
+               key={nanoid()}
             />
-         )}
+         ))}
       </div>
-   )
+   );
 }
 
-export default ProjectList
+export default ProjectList;
 
+ProjectList.propTypes = {
+   selected: PropTypes.string.isRequired,
+   projects: PropTypes.arrayOf(PropTypes.string).isRequired,
+};

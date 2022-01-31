@@ -46,7 +46,7 @@
    },
    "main": "index.js",
    "repository": "https://github.com/Anna-Kolycheva/ra-events-state-1.git",
-   "homepage": "yarn create react-app",
+   "homepage": "https://anna-kolycheva.github.io/ra-events-state-1/",
    "author": "Kolycheva Anna <annakolyt@gmail.com>",
    "license": "MIT"
 }
